@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedinIn, FaHackerrank, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaHackerrank, FaXTwitter } from 'react-icons/fa6';
+
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -8,22 +9,17 @@ const socials = [
   {
     name: 'GitHub',
     icon: FaGithub,
-    link: 'github.com/example'
+    link: 'www.github.com/agilarasu'
   },
   {
     name: 'LinkedIn',
     icon: FaLinkedinIn,
-    link: 'linkedin.com/in/example'
+    link: 'www.linkedin.com/in/agilarasu'
   },
   {
-    name: 'HackerRank',
-    icon: FaHackerrank,
-    link: 'hackerrank.com/example'
-  },
-  {
-    name: 'Twitter',
-    icon: FaTwitter,
-    link: 'twitter.com/example'
+    name: 'X',
+    icon: FaXTwitter,
+    link: 'www.twitter.com/agilarasu'
   },
 ]
 

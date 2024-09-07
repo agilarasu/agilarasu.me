@@ -2,33 +2,45 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
-
+import clashofclans from '../assets/clashofclans_assets/clashofclans_screen2018_summer.webp'
 const projects = [
   {
-    name: 'E-commerce Platform',
-    image: '/placeholder.svg?height=192&width=384',
-    description: 'A fully-featured e-commerce platform built with React and Next.js.',
-    link: 'https://example.com/ecommerce'
+    name: 'Clashpy - Clash of Clans API Library',
+    image: clashofclans,
+    description: 'A Python library for interacting with the Clash of Clans API.',
+    link: 'https://pypi.org/project/clashpy/'
   },
   {
-    name: 'Social Media App',
+    name: 'Python PWA Installer',
     image: '/placeholder.svg?height=192&width=384',
-    description: 'A modern social media app built with React, Firebase, and Material-UI.',
-    link: 'https://example.com/socialmedia'
+    description: 'A Python script to install any website into a lightweight PWA.',
+    link: 'https://example.com/python-pwa-installer'
   },
   {
-    name: 'Task Management App',
+    name: 'Windows Dock',
     image: '/placeholder.svg?height=192&width=384',
-    description: 'A powerful task management app built with React, Redux, and Firebase.',
-    link: 'https://example.com/taskmanagement'
+    description: 'A dock for Windows with features similar to GNOME dock.',
+    link: 'https://example.com/windows-dock'
+  },
+  {
+    name: 'Weather Station API',
+    image: '/placeholder.svg?height=192&width=384',
+    description: 'A fully-featured API for Davis weather station Device, built with Django REST framework.',
+    link: 'https://example.com/weather-station-api'
   },
   {
     name: 'Personal Blog',
     image: '/placeholder.svg?height=192&width=384',
-    description: 'A personal blog built with Next.js and Markdown.',
-    link: 'https://example.com/personalblog'
+    description: 'A personal blog built with React.js.',
+    link: 'https://example.com/personal-blog'
   },
-]
+  {
+    name: 'Heimdall - AI-Powered Penetration Testing',
+    image: '/placeholder.svg?height=192&width=384',
+    description: 'A penetration testing tool that uses AI models to identify vulnerabilities.',
+    link: 'https://example.com/heimdall'
+  }
+];
 
 export default function MyProjects() {
   return (
@@ -39,13 +51,14 @@ export default function MyProjects() {
           Check out some of the projects I've worked on. From web apps to mobile experiences, I've got a diverse portfolio.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {projects.map((project, index) => (
           <Card key={index} className="bg-card overflow-hidden">
             <img 
               src={project.image} 
               alt={project.name} 
               className="w-full h-48 object-cover transition-opacity duration-300 hover:opacity-75"
+              style={{ maxWidth: '100%', maxHeight: '100%' }} // Add this line to limit the image size
             />
             <CardHeader>
               <CardTitle>{project.name}</CardTitle>

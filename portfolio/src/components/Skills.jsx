@@ -1,38 +1,48 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code, Figma, Database, Cloud,  Network, Github } from "lucide-react"
+import { Code, Figma, Database, Cloud, Network, Github, ShieldCheck, CodeXml, ScrollText } from "lucide-react"
+import { DiJsBadge } from "react-icons/di";
+import { FaPython } from "react-icons/fa";
+import { SiMicrosoftazure } from "react-icons/si";
+import { SiDjango } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
 
 const skills = [
   {
+    name: 'Penetration Testing',
+    icon: ShieldCheck,
+    description: 'Skilled in identifying and exploiting vulnerabilities in web applications and networks.'
+  },
+  {
+    name: 'React JS',
+    icon: FaReact,
+    description: 'Proficient in building modern web applications with React, including state management with Redux.'
+
+  },
+  {
     name: 'JavaScript',
-    icon: Code,
+    icon: DiJsBadge,
     description: 'Proficient in modern JavaScript, including ES6+ features and popular frameworks/libraries like React and Node.js.'
   },
   {
-    name: 'UI/UX Design',
-    icon: Figma,
-    description: 'Skilled in creating user-friendly and visually appealing interfaces using tools like Figma and Sketch.'
+    name: "Django",
+    icon: SiDjango,
+    description: "Proficient in building web applications with Django, including RESTful APIs and authentication."
   },
   {
-    name: 'Database Management',
-    icon: Database,
-    description: 'Experienced in designing and managing relational databases using SQL and NoSQL technologies like PostgreSQL and MongoDB.'
+    name: 'Python',
+    icon: FaPython,
+    description: 'Proficient in Python programming, including data analysis, web scraping, and automation.'
   },
   {
-    name: 'Cloud Computing',
-    icon: Cloud,
-    description: 'Knowledgeable in cloud-based infrastructure and services, including AWS, Azure, and Google Cloud Platform.'
+    name: 'Azure',
+    icon: SiMicrosoftazure,
+    description: 'Familiar with Microsoft Azure cloud services, including virtual machines, storage, and networking.'
   },
-  {
-    name: 'Version Control',
-    icon: Github,
-    description: 'Proficient in using Git for version control and collaborating with teams on software projects.'
-  },
-  {
-    name: 'System Design',
-    icon: Network,
-    description: 'Experienced in designing scalable and efficient software systems, including microservices and distributed architectures.'
-  },
+
+  
+
+
 ]
 
 export default function Skills() {
@@ -42,9 +52,9 @@ export default function Skills() {
       <p className="text-center text-muted-foreground mb-12">
         Here are the key skills I have developed over the years.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skills.map((skill, index) => (
-          <Card 
+          <Card
             key={index}
             className="bg-card hover:bg-accent transition-colors duration-200"
           >
