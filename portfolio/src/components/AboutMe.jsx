@@ -1,27 +1,30 @@
-import React from 'react';
-import goat from '../assets/goat.jpeg';
-function AboutMe({ primary = "white", secondary = "green-600", background = "black" }) {
+import React from 'react'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
+export default function AboutMe() {
   return (
-    <section className={`container mx-auto w-full flex flex-col md:flex-row items-center justify-center px-4 py-16 bg-${background}`}>
-      {/* Image on the left side for larger screens */}
-      <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8"> 
-        <div className="bg-gray-800 rounded-md shadow-lg overflow-hidden"> {/* Added a background and rounded corners to the image container */}
-          <img src={goat} alt="Goat" className="w-full h-full object-cover" />
+    <section className="w-[80%] mx-auto py-12 md:py-24 lg:py-32 bg-black">
+            <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
+
+      <div className="container grid items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
+        <div className="space-y-4">
+          <div className="prose text-white text-lg/relaxed lg:text-xl/relaxed xl:text-xl/relaxed">
+            <p>
+              Hi there! I'm a passionate web developer with a keen eye for design and a love for creating beautiful and
+              functional websites. 
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring the great outdoors, reading the latest tech blogs, or
+              tinkering with new gadgets. I'm constantly learning and growing, and I'm excited to bring that energy and
+              enthusiasm to every project I work on.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div className={`w-full md:w-1/2 text-center md:text-left`}>
-        <h2 className={`text-3xl md:text-4xl font-bold mb-4 text-${secondary}`}>About Me</h2>
-        <p className={`text-lg md:text-xl leading-relaxed text-${primary}`}>
-          Hi, I'm John Doe, a passionate web developer with a love for creating beautiful and functional websites. 
-          With over 5 years of experience in the industry, I've honed my skills in HTML, CSS, JavaScript, and various front-end frameworks like React.
-
-          I'm driven by a desire to constantly learn and improve, and I enjoy tackling challenging projects that push the boundaries of what's 
-          possible on the web. When I'm not coding, you can find me exploring the great outdoors, reading the latest tech blogs, or tinkering with new technologies.
-        </p>
+        <Avatar className="mx-auto aspect-square overflow-hidden rounded-xl sm:w-full">
+          <AvatarImage src="/placeholder.svg" alt="About" className="object-cover" />
+          <AvatarFallback>ME</AvatarFallback>
+        </Avatar>
       </div>
     </section>
-  );
+  )
 }
-
-export default AboutMe;
