@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from "react-scroll";
 
-function Header({ primary = "white", secondary = "green-600", background = "green-500", buttonColor = "green-600" }) {
+function Header({ primary = "white", secondary = "green-600", background = "black", buttonColor = "green-600" }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className={`bg-[${background}] sticky top-0 z-50 py-4`} style={{ width: '100%' }}>
+    <header className={`bg-${background} sticky top-0 z-50 py-4`} style={{ width: '100%' }}>
       <div className="container mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center">
           <div>
-            <span className={`text-[${primary}] font-bold text-2xl`}>Arasan</span>
+            <span className={`text-${primary} font-bold text-2xl`}>Arasan</span>
           </div>
           <nav>
             <button className="md:hidden" onClick={() => setIsNavOpen(!isNavOpen)}>

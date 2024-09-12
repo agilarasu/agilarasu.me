@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedinIn, FaHackerrank, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLinkedinIn, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
@@ -21,6 +21,11 @@ const socials = [
     icon: FaXTwitter,
     link: 'www.twitter.com/agilarasu'
   },
+  {
+    name: 'Instagram',
+    icon: FaInstagram,
+    link: 'www.instagram.com/_agilarasu'
+  }
 ]
 
 export default function ConnectWithMe() {

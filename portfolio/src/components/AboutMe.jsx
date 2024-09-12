@@ -10,13 +10,11 @@ export default function AboutMe() {
         <div className="space-y-4">
           <div className="prose text-white text-lg/relaxed lg:text-xl/relaxed xl:text-xl/relaxed">
             <p>
-              Hi there! I'm a passionate web developer with a keen eye for design and a love for creating beautiful and
-              functional websites. 
+              Hi there! I'm Aspiring web security researcher with a strong foundation in Python, Bash scripting, and Debian Linux distributions. Passionate about cybersecurity. My technical skills include proficiency in Django, MongoDB, and Azure.
             </p>
+            <br />
             <p>
-              When I'm not coding, you can find me exploring the great outdoors, reading the latest tech blogs, or
-              tinkering with new gadgets. I'm constantly learning and growing, and I'm excited to bring that energy and
-              enthusiasm to every project I work on.
+            Currently, I am engaged in learning and researching various aspects of web security, aiming to contribute to the rapidly evolving field of cybersecurity.
             </p>
           </div>
         </div>
