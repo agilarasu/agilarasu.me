@@ -2,6 +2,18 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+
 import clashofclans from "../assets/clashofclans_assets/clashofclans_screen2018_summer.webp";
 const projects = [
   {
@@ -71,16 +83,37 @@ export default function MyProjects() {
               <p className="text-muted-foreground mb-4">
                 {project.description}
               </p>
-              <Button variant="outline" asChild>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  View Project <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
+
+              <Drawer>
+                <DrawerTrigger>
+                  <Button variant="outline" asChild>
+                    <a className="w-full">
+                      View Project <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <DrawerHeader>
+                    <DrawerTitle>{project.name}</DrawerTitle>
+                    <DrawerDescription>{project.description}</DrawerDescription>
+                  </DrawerHeader>
+                  <DrawerFooter>
+                    <Button variant="default" asChild>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                          className="b-full"
+                        >
+                            Visit Project <ExternalLink className="ml-2 h-4 w-4" />
+                          </a>
+                    </Button>
+                    <DrawerClose>
+                      <Button variant="outline">Cancel</Button>
+                    </DrawerClose>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
             </CardContent>
           </Card>
         ))}
