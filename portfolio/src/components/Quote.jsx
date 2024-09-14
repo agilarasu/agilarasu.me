@@ -1,10 +1,10 @@
-import React from "react"
-import { Card, CardContent } from "@/components/ui/card"
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
-export default function QuoteSection({ 
-  primary = "white", 
-  secondary = "green-600", 
-  background = "black" 
+export default function QuoteSection({
+  primary = "white",
+  secondary = "green-600",
+  background = "black",
 }) {
   return (
     <section
@@ -15,22 +15,20 @@ export default function QuoteSection({
           <p
             className="text-xl md:text-2xl leading-relaxed font-medium px-10 py-8"
             style={{
-              background: "linear-gradient(to right, #c0c0c0, #ffffff, #c0c0c0)",
+              background:
+                "linear-gradient(to right, #c0c0c0, #ffffff, #c0c0c0)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
             }}
           >
-            "The only way to do great work is to love what you do. If you haven't
-            found it yet, keep looking. Don't settle."
+            "Be yourself; everyone else is already taken."
           </p>
 
-          <p className="text-right mt-4 pr-10 text-gray-400">
-            - Steve Jobs
-          </p>
+          <p className="text-right mt-4 pr-10 text-gray-400">-Oscar Wilde </p>
         </CardContent>
       </Card>
     </section>
-  )
+  );
 }

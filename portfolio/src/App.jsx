@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Intro from './components/Intro';
 import Header from './components/Header';
+import QuoteSection from './components/Quote';
 import AboutMe from './components/AboutMe';
 import MySkills from './components/Skills';
 import MyProjects from './components/MyProjects';
@@ -18,9 +19,12 @@ function App() {
       <div id="home">
         <Intro primary="white" secondary="green-600" background="black" buttonColor="green-600" />
       </div>
+      <div id="quote">
+        <QuoteSection primary="white" secondary="green-600" background="slate-500" />
+      </div>
       <div id="about">
         <AboutMe primary="white" secondary="green-600" background="black" />
-      </div>
+      </div>    
       <div id="skills">
         <MySkills primary="white" secondary="green-600" background="black" />
       </div>
