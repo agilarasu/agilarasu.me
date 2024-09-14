@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedinIn, FaInstagram, FaXTwitter } from 'react-icons/fa6';
-
+import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
+import { SiIndiehackers } from "react-icons/si";
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -22,9 +22,9 @@ const socials = [
     link: 'www.twitter.com/agilarasu'
   },
   {
-    name: 'Instagram',
-    icon: FaInstagram,
-    link: 'www.instagram.com/_agilarasu'
+  name: 'IndieHackers',
+  icon: SiIndiehackers,
+  link: 'www.indiehackers.com/agilarasu'
   }
 ]
 

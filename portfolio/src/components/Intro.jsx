@@ -12,7 +12,7 @@ export default function Intro({
   buttonColor = "white-600",
 }) {
   const [currentProfession, setCurrentProfession] = useState(0);
-  const professions = ["Security Researcher", "Backend Developer"];
+  const professions = ["Indie Hacker","Security Researcher", "Backend Developer"];
   const professionRef = useRef(null);
 
   useEffect(() => {
@@ -56,12 +56,12 @@ export default function Intro({
               Get in touch
             </Button>
           </Link>
-          <Button
+          {/* <Button
             variant="outline"
             className={`text-white bg-black px-6 py-3 rounded-full border border-white-200 border-opacity-50 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg`}
           >
             My CV
-          </Button>
+          </Button> */}
         </div>
       </div>
 
