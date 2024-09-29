@@ -15,44 +15,43 @@ import {
 } from "@/components/ui/drawer";
 
 import clashofclans from "../assets/clashofclans_assets/clashofclans_screen2018_summer.webp";
+import geminipdf from "../assets/gemini.png";
+import personalSite from "../assets/personalSite.png";
 const projects = [
   {
-    name: "Clashinfo - Clash of Clans API Library",
+    name: "Clashinfo - Clash of Clans API Wrapper",
     image: clashofclans,
-    description:
-      "A Python library for interacting with the Clash of Clans API.",
+    description: "A Python Wrapper for interacting with the Clash of Clans API.",
     link: "https://pypi.org/project/clashpy/",
+  },
+  {
+    name: "Gemini PDF Chat",
+    image: geminipdf,
+    description: "An RAG for retrieving and generating information from PDFs using Gemini API.",
+    link: "https://github.com/agilarasu/gemini_pdf_chat",
   },
   {
     name: "Python PWA Installer",
     image: "/placeholder.svg?height=192&width=384",
-    description:
-      "A Python script to install any website into a lightweight PWA.",
+    description: "A Python script to convert any website into a Progressive Web App (PWA).",
     link: "https://github.com/agilarasu/pwa_maker",
   },
   {
     name: "Windows Dock",
     image: "/placeholder.svg?height=192&width=384",
-    description: "A dock for Windows with features similar to GNOME dock.",
-    link: "https://example.com/windows-dock",
-  },
-  //  {
-  //    name: 'Weather Station API',
-  //    image: '/placeholder.svg?height=192&width=384',
-  //    description: 'A fully-featured API for Davis weather station Device, built with Django REST framework.',
-  //    link: 'https://example.com/weather-station-api'
-  //},
-  {
-    name: "Personal Blog",
-    image: "/placeholder.svg?height=192&width=384",
-    description: "A personal blog built with React.js.",
-    link: "https://example.com/personal-blog",
+    description: "A customizable dock for Windows, inspired by GNOME dock features.",
+    link: "https://github.com/agilarasu/windows-dock",
   },
   {
-    name: "Heimdall - AI-Powered Penetration Testing ",
+    name: "Personal Site",
+    image: personalSite,
+    description: "A personal Site developed using React.js.",
+    link: "https://agilarasu.github.io",
+  },
+  {
+    name: "Heimdall - AI-Powered Penetration Testing",
     image: "/placeholder.svg?height=192&width=384",
-    description:
-      "(Currently on private repo due to security issues) A penetration testing tool that uses AI models to identify vulnerabilities.",
+    description: "An advanced penetration testing tool leveraging AI to identify vulnerabilities. (Currently in a private repository due to security concerns)",
     link: "https://github.com/agilarasu/heimdall",
   },
 ];
