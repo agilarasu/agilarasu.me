@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import img from "@/assets/g.png";
+import img from "@/assets/me.png";
 
 export default function Intro() {
   const [currentProfession, setCurrentProfession] = useState(0);
@@ -32,14 +32,24 @@ export default function Intro() {
 
   return (
     <section
-      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
-    >
+      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4">
+      <div className="w-full md:w-1/3">
+        <div
+          className="rounded-full w-64 h-64 md:w-72 md:h-72 mx-auto relative flex items-center justify-center"
+        >
+          <Avatar className="w-60 h-60 md:w-64 md:h-64 border-4 border-gray-600">
+            <AvatarImage src={img} alt="Profile picture" />
+            <AvatarFallback>AG</AvatarFallback>
+          </Avatar>
+        </div>
+      </div>
+      
       <div
-        className="text-center md:text-left mb-8 md:mb-0 w-full md:w-1/2"
+        className="text-center md:text-left md:mb-0"
       >
-        <h1 className="text-3xl md:text-6xl font-bold mb-4">
-          Hi 👋
-          <br /> I'm <span className={`text-blue-400`}>Agilarasu</span>
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <span className="text-3xl md:text-3xl">Hi 👋</span>
+          <br /> I'm <span className={`text-blue-500`}>Agilarasu</span>
         </h1>
         <p ref={professionRef} className="text-lg md:text-xl mb-6">
           {professions[currentProfession]}
@@ -61,16 +71,7 @@ export default function Intro() {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2">
-        <div
-          className="rounded-full bg-white w-36 h-36 md:w-72 md:h-72 mx-auto relative flex items-center justify-center"
-        >
-          <Avatar className="w-32 h-32 md:w-64 md:h-64 border-4 border-gray-600">
-            <AvatarImage src={img} alt="Profile picture" />
-            <AvatarFallback>AG</AvatarFallback>
-          </Avatar>
-        </div>
-      </div>
+
     </section>
   );
 }

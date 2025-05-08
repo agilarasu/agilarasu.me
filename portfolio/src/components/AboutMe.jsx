@@ -6,8 +6,8 @@ export default function AboutMe() {
       <div className="container grid items-center gap-8 px-4 md:px-6">
         <div className="space-y-4">
           <div className="prose container grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-8">About Me</h2>
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-blue-500">About Me</h2>
               <p className="text-lg/relaxed lg:text-xl/relaxed">
                 I'm a <b>final year IT student</b> passionate about developing impactful technology solutions. 
                 My expertise spans across <b>Artificial Intelligence, Web Development,</b> and <b>Cybersecurity</b>, 
