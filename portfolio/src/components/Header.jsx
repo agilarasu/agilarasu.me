@@ -32,7 +32,7 @@ function Header() {
       <div className="container mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center">
           <div>
-            <span className={`font-bold text-2xl`}>Arasan</span>
+            <span className={`font-bold text-2xl`}>Agilarasu Saravanan</span>
           </div>
           <nav className="flex items-center gap-4">
             <ThemeToggle />

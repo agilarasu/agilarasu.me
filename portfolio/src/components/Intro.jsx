@@ -60,17 +60,18 @@ export default function Intro() {
           <Link to="connect" smooth={true} duration={500}>
             <Button
             variant="outline"
-              className="bg-[hsl(var(--accent-background))] text-[hsl(var(--accent))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
+              className="bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
             >
               Let's Connect
             </Button>
           </Link>
-          {/* <Button
+          <Button
             variant="outline"
-            className={`text-white bg-black px-6 py-3 rounded-full border border-white-200 border-opacity-50 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg`}
-          >
-            My CV
-          </Button> */}
+            className="bg-[hsl(var(--accent-background))] text-[hsl(var(--accent))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
+            >
+            <span className="block md:hidden">Get Resume</span>
+            <span className="hidden md:block">Download Resume</span>
+          </Button>
         </div>
       </div>
 
