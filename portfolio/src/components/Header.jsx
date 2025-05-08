@@ -58,11 +58,11 @@ function Header() {
                   <Link to="about" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer">
                     About
                   </Link>
-                  <Link to="skills" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer">
-                    Skills
-                  </Link>
                   <Link to="projects" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer">
                     Projects
+                  </Link>
+                  <Link to="skills" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer">
+                    Skills
                   </Link>
                   <Link to="connect" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer">
                     Connect
@@ -94,13 +94,13 @@ function Header() {
                 </Link>
               </li>
               <li className={`text-lg`}>
-                <Link to="skills" smooth={true} duration={500} className="cursor-pointer">
-                  Skills
+                <Link to="projects" smooth={true} duration={500} className="cursor-pointer">
+                  Projects
                 </Link>
               </li>
               <li className={`text-lg`}>
-                <Link to="projects" smooth={true} duration={500} className="cursor-pointer">
-                  Projects
+                <Link to="skills" smooth={true} duration={500} className="cursor-pointer">
+                  Skills
                 </Link>
               </li>
               <li>

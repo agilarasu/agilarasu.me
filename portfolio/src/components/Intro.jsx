@@ -43,7 +43,9 @@ export default function Intro() {
           </Avatar>
         </div>
       </div>
-      
+      <div className="hidden md:block w-px h-48 bg-[hsl(var(--border))] mx-8 self-center">
+        {/* Vertical divider visible only in desktop view */}
+      </div>
       <div
         className="text-center md:text-left md:mb-0"
       >
