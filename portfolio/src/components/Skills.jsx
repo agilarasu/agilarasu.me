@@ -60,7 +60,7 @@ const skills = [
 export default function Skills() {
   return (
     <section className="container mx-auto w-[80%] md:w-full py-16">
-      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[hsl(var(--accent))] text-center">My Skills</h2>
+      <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-[hsl(var(--accent))] text-center">My Skills</h2>
       <p className="text-center text-muted-foreground mb-12">
         Here are the key skills I have developed over the years.
       </p>
@@ -76,7 +76,7 @@ export default function Skills() {
               {/* Icon wrapper for styling */}
               <div className="p-3 rounded-full bg-primary/10 shrink-0"> {/* Use bg-primary/10 for a subtle background */}
                 {/* Icon size slightly adjusted */}
-                <skill.icon className="w-8 h-8 text-primary" />
+                <skill.icon className="w-8 h-8 text-[hsl(var(--foreground))]" />
               </div>
               {/* Adjusted title font size and weight, added leading */}
               <CardTitle className="text-lg font-semibold leading-tight">{skill.name}</CardTitle>

@@ -64,7 +64,7 @@ export default function MyProjects() {
   return (
     <section className="container mx-auto w-full py-16">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[hsl(var(--accent))]">My Projects</h2>
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-[hsl(var(--accent))]">My Projects</h2>
         <p className="text-muted-foreground mt-2">
           Check out some of the projects I've worked on. From web apps to ML Models.
         </p>

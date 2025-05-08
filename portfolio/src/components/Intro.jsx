@@ -51,7 +51,7 @@ export default function Intro() {
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
           <span className="text-3xl md:text-3xl text-[hsl(var(--foreground))]">Hi 👋</span>
-          <br /> I'm <span className={`text-[hsl(var(--accent))]`}>Agilarasu</span>
+          <br /> I'm <span className={`font-extrabold text-[hsl(var(--accent))]`}>Agilarasu</span>
         </h1>
         <p ref={professionRef} className="text-lg md:text-xl mb-6">
           {professions[currentProfession]}
@@ -59,9 +59,10 @@ export default function Intro() {
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
           <Link to="connect" smooth={true} duration={500}>
             <Button
+            variant="outline"
               className="bg-[hsl(var(--accent-background))] text-[hsl(var(--accent))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
             >
-              Get in touch
+              Let's Connect
             </Button>
           </Link>
           {/* <Button

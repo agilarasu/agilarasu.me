@@ -6,6 +6,7 @@ import QuoteSection from './components/Quote';
 import AboutMe from './components/AboutMe';
 import MySkills from './components/Skills';
 import MyProjects from './components/MyProjects';
+import Certifications from './components/Certifications';
 import ConnectWithMe from './components/ConnectWithMe';
 import { Link } from "react-scroll";
 import { ThemeProvider } from './theme-provider';
@@ -27,6 +28,9 @@ function App() {
         </div>
         <div id="skills">
           <MySkills />
+        </div>
+        <div id="Certifications"> 
+          <Certifications />
         </div>
         <div id="quote">
           <QuoteSection />
