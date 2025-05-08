@@ -37,7 +37,7 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section className="container mx-auto w-[80%] mb:w-full py-16">
+    <section className="container mx-auto w-[80%] mb:w-full py-20">
       <div className="mb-12 text-center">
         <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-[hsl(var(--accent))] leading-tight">
           Certifications

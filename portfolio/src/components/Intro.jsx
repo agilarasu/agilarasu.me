@@ -1,5 +1,6 @@
 "use client";
 import { Link } from "react-scroll";
+import { ChevronDown } from "lucide-react";
 
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -32,7 +33,8 @@ export default function Intro() {
 
   return (
     <section
-      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4">
+      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
+    >
       <div className="w-full md:w-1/3">
         <div
           className="rounded-full w-64 h-64 md:w-72 md:h-72 mx-auto relative flex items-center justify-center"
@@ -75,7 +77,14 @@ export default function Intro() {
         </div>
       </div>
 
-
+      {/* Scroll Down Button */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <Link to="about" smooth={true} duration={500}>
+          <ChevronDown
+            className="w-10 h-10 text-[hsl(var(--accent))] cursor-pointer animate-bounce"
+          />
+        </Link>
+      </div>
     </section>
   );
 }

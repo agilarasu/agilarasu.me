@@ -2,7 +2,7 @@ import React from "react";
 import img from "@/assets/mu.jpeg";
 export default function AboutMe() {
   return (
-    <section className="w-full md:w-[90%] lg:w-[80%] mx-auto py-12 md:py-24 lg:py-32 flex items-center min-h-[70vh]">
+    <section className="w-full md:w-[90%] lg:w-[80%] mx-auto py-12 md:py-24 lg:py-32 flex items-center min-h-[70vh] py-20">
       <div className="container grid items-center gap-8 px-4 md:px-6">
         <div className="space-y-4">
           <div className="prose container grid lg:grid-cols-2 lg:gap-16 items-center">

@@ -59,7 +59,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="container mx-auto w-[80%] md:w-full py-16">
+    <section className="container mx-auto w-[80%] md:w-full py-20">
       <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-[hsl(var(--accent))] text-center">My Skills</h2>
       <p className="text-center text-muted-foreground mb-12">
         Here are the key skills I have developed over the years.

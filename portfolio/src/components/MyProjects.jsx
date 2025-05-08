@@ -62,7 +62,7 @@ const projects = [
 
 export default function MyProjects() {
   return (
-    <section className="container mx-auto w-full py-16">
+    <section className="container mx-auto w-full py-20">
       <div className="mb-8 text-center">
         <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-[hsl(var(--accent))]">My Projects</h2>
         <p className="text-muted-foreground mt-2">
