@@ -19,17 +19,17 @@ function App() {
         <div id="home">
           <Intro />
         </div>
-        <div id="quote">
-          <QuoteSection />
-        </div>
         <div id="about">
           <AboutMe />
+        </div>
+        <div id="projects">
+          <MyProjects />
         </div>
         <div id="skills">
           <MySkills />
         </div>
-        <div id="projects">
-          <MyProjects />
+        <div id="quote">
+          <QuoteSection />
         </div>
         <div id="connect">
           <ConnectWithMe />

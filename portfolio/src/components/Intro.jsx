@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import img from "@/assets/img.jpg";
+import img from "@/assets/g.png";
 
 export default function Intro() {
   const [currentProfession, setCurrentProfession] = useState(0);
@@ -67,7 +67,7 @@ export default function Intro() {
         >
           <Avatar className="w-32 h-32 md:w-64 md:h-64 border-4 border-gray-600">
             <AvatarImage src={img} alt="Profile picture" />
-            <AvatarFallback>YN</AvatarFallback>
+            <AvatarFallback>AG</AvatarFallback>
           </Avatar>
         </div>
       </div>

@@ -1,37 +1,28 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 export default function AboutMe() {
   return (
-    <section className="w-[80%] mx-auto py-12 md:py-24 lg:py-32">
-      <h2 className="text-3xl font-bold text-center mb-8">About Me </h2>
-
-      <div className="container grid items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
+    <section className="w-full md:w-[90%] lg:w-[80%] mx-auto py-12 md:py-24 lg:py-32 flex items-center min-h-[70vh]">
+      <div className="container grid items-center gap-8 px-4 md:px-6">
         <div className="space-y-4">
-          <div className="prose text-lg/relaxed lg:text-xl/relaxed xl:text-xl/relaxed">
-            <p>
-              I'm an indie hacker building a personalized learning platform that
-              tailors educational content to individual needs.<br/>
-              <br />
-               I have a deep passion for cybersecurity and
-              continuously apply my knowledge to real-world projects.
-              <br />
-              <br />
-              <p>
-                I'm always exploring new technologies and learning opportunities
-                in cybersecurity and personalized learning solutions.
+          <div className="prose container grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">About Me</h2>
+              <p className="text-lg/relaxed lg:text-xl/relaxed">
+                I'm a <b>final year IT student</b> passionate about developing impactful technology solutions. 
+                My expertise spans across <b>Artificial Intelligence, Web Development,</b> and <b>Cybersecurity</b>, 
+                driven by an insatiable curiosity to explore emerging technologies.
               </p>
-            </p>
+            </div>
+            <div className="mt-6 lg:mt-0 flex justify-center">
+              <img 
+                src="/src/assets/mu.jpeg" 
+                alt="Profile image" 
+                className="rounded-lg shadow-lg max-h-[400px] object-cover"
+              />
+            </div>
           </div>
         </div>
-        <Avatar className="mx-auto aspect-square overflow-hidden rounded-xl sm:w-full">
-          <AvatarImage
-            src="/placeholder.svg"
-            alt="About"
-            className="object-cover"
-          />
-          <AvatarFallback>ME</AvatarFallback>
-        </Avatar>
       </div>
     </section>
   );
