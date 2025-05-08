@@ -37,7 +37,7 @@ export default function Intro() {
         <div
           className="rounded-full w-64 h-64 md:w-72 md:h-72 mx-auto relative flex items-center justify-center"
         >
-          <Avatar className="w-60 h-60 md:w-64 md:h-64 border-4 border-gray-600">
+          <Avatar className="w-60 h-60 md:w-64 md:h-64 border-4 border-[hsl(var(--border))]">
             <AvatarImage src={img} alt="Profile picture" />
             <AvatarFallback>AG</AvatarFallback>
           </Avatar>
@@ -48,8 +48,8 @@ export default function Intro() {
         className="text-center md:text-left md:mb-0"
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          <span className="text-3xl md:text-3xl">Hi 👋</span>
-          <br /> I'm <span className={`text-blue-500`}>Agilarasu</span>
+          <span className="text-3xl md:text-3xl text-[hsl(var(--foreground))]">Hi 👋</span>
+          <br /> I'm <span className={`text-[hsl(var(--accent))]`}>Agilarasu</span>
         </h1>
         <p ref={professionRef} className="text-lg md:text-xl mb-6">
           {professions[currentProfession]}
@@ -57,7 +57,7 @@ export default function Intro() {
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
           <Link to="connect" smooth={true} duration={500}>
             <Button
-              className="bg-white text-black px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
+              className="bg-[hsl(var(--accent-background))] text-[hsl(var(--accent))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
             >
               Get in touch
             </Button>

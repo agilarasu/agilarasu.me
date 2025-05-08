@@ -13,7 +13,7 @@ import { ThemeProvider } from './theme-provider';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-[hsl(var(--background))] text-foreground">
         <Header />
         {/* Add IDs outside the component to ensure scroll works */}
         <div id="home">

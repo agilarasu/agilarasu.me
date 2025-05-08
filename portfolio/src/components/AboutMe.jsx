@@ -7,10 +7,10 @@ export default function AboutMe() {
         <div className="space-y-4">
           <div className="prose container grid lg:grid-cols-2 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-blue-500">About Me</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[hsl(var(--accent))]">About Me</h2>
               <p className="text-lg/relaxed lg:text-xl/relaxed">
-                I'm a <b>final year IT student</b> passionate about developing impactful technology solutions. 
-                My expertise spans across <b>Artificial Intelligence, Web Development,</b> and <b>Cybersecurity</b>, 
+                I'm a <b className="text-[hsl(var(--primary))]">final year IT student</b> passionate about developing impactful technology solutions. 
+                My expertise spans across <b className="text-[hsl(var(--primary))]">Artificial Intelligence, Web Development,</b> and <b className="text-[hsl(var(--primary))]">Cybersecurity</b>, 
                 driven by an insatiable curiosity to explore emerging technologies.
               </p>
             </div>
