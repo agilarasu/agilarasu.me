@@ -10,6 +10,7 @@ import Certifications from './components/Certifications';
 import ConnectWithMe from './components/ConnectWithMe';
 import { Link } from "react-scroll";
 import { ThemeProvider } from './theme-provider';
+import ThemeToggle from './components/ui/ThemeToggle';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         <div id="connect">
           <ConnectWithMe />
         </div>
+
+        {/* Add the floating ThemeToggle button */}
+        <ThemeToggle />
       </div>
     </ThemeProvider>
   );

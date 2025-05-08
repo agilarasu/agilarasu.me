@@ -3,11 +3,10 @@
 /* Clean up initial body - let Tailwind variables handle it */
 body {
     font-family: 'Raleway', sans-serif;
-    /* background-color and color will be set by Tailwind classes below */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: auto; /* Keep if you need horizontal scrolling, consider 'hidden' otherwise */
+    overflow-x: auto;
 }
 
 /* Import Tailwind */
@@ -15,7 +14,7 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-/* Your custom animation */
+/* Custom animation */
 @keyframes slideDown {
     0% {
       transform: translateY(-10px);
@@ -27,12 +26,12 @@ body {
     }
 }
 
-/* Hide scrollbar - keep if desired */
+/* Hide scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* --- Elegant Lavender Color Palette Variables --- */
+/* --- Default/Base Theme --- */
 @layer base {
   :root {
     /* Light Mode */
@@ -45,31 +44,24 @@ body {
     --popover: 0 0% 100%;
     --popover-foreground: var(--foreground);
 
-    --primary: 270 40% 60%;        /* Elegant mid-tone lavender (for buttons, main interactions) */
+    --primary: 270 40% 60%;        /* Elegant mid-tone lavender */
     --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 270 10% 92%;      /* Light lavender grey (for secondary backgrounds/borders) */
+    --secondary: 270 10% 92%;      /* Light lavender grey */
     --secondary-foreground: var(--foreground);
 
-    --muted: 270 5% 95%;           /* Even lighter lavender grey (for subtle elements) */
+    --muted: 270 5% 95%;           /* Even lighter lavender grey */
     --muted-foreground: 240 5% 40%; /* Medium grey for muted text */
 
-    --accent: 270 50% 55%;         /* Slightly richer lavender (for links, highlights, focus rings) */
+    --accent: 270 50% 55%;         /* Slightly richer lavender */
     --accent-foreground: 0 0% 100%; /* White text on accent */
 
-    --destructive: 0 70% 50%;      /* Standard red, slightly desaturated */
+    --destructive: 0 70% 50%;      /* Standard red */
     --destructive-foreground: 0 0% 98%; /* Near white */
 
     --border: 270 10% 90%;         /* Subtle lavender grey border */
     --input: 270 10% 90%;
-    --ring: var(--accent);         /* Ring matches accent color */
-
-    --chart-1: 220 70% 50%; /* Example: Blue */
-    --chart-2: 160 60% 45%; /* Example: Teal */
-    --chart-3: 40 80% 60%;  /* Example: Orange/Gold */
-    --chart-4: 300 60% 65%; /* Example: Magenta/Pink */
-    --chart-5: 120 50% 40%; /* Example: Green */
-
+    --ring: var(--accent);
 
     --radius: 0.5rem;
   }
@@ -85,31 +77,174 @@ body {
     --popover: 240 10% 15%;
     --popover-foreground: var(--foreground);
 
-    --primary: 270 40% 70%;        /* Lighter elegant lavender (for buttons, main interactions) */
+    --primary: 270 40% 70%;        /* Lighter elegant lavender */
     --primary-foreground: 240 10% 15%; /* Dark text on primary */
 
-    --secondary: 240 10% 20%;      /* Lighter dark grey (for secondary backgrounds/borders) */
+    --secondary: 240 10% 20%;      /* Lighter dark grey */
     --secondary-foreground: var(--foreground);
 
-    --muted: 240 10% 25%;           /* Even lighter dark grey (for subtle elements) */
+    --muted: 240 10% 25%;           /* Even lighter dark grey */
     --muted-foreground: 240 5% 60%; /* Medium grey for muted text */
 
-    --accent: 270 50% 75%;         /* Brighter lavender (for links, highlights, focus rings) */
+    --accent: 270 50% 75%;         /* Brighter lavender */
     --accent-foreground: 240 10% 15%; /* Dark text on accent */
-
 
     --destructive: 0 60% 40%;      /* Darker red */
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 10% 30%;         /* Moderate dark grey border */
     --input: 240 10% 30%;
-    --ring: var(--accent);         /* Ring matches accent color */
+    --ring: var(--accent);
 
-    --chart-1: 220 60% 60%;
-    --chart-2: 160 50% 55%;
-    --chart-3: 40 70% 70%;
-    --chart-4: 300 50% 75%;
-    --chart-5: 120 40% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+/* --- Lavender Palette --- */
+@layer base {
+  .lavender:root {
+    /* Light Mode - Lavender */
+    --background: 270 5% 98%;      /* Very pale lavender hint */
+    --foreground: 240 10% 15%;     /* Soft dark grey */
+    --primary: 270 40% 60%;        /* Elegant mid-tone lavender */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 270 10% 92%;      /* Light lavender grey */
+    --secondary-foreground: var(--foreground);
+    --muted: 270 5% 95%;           /* Even lighter lavender grey */
+    --muted-foreground: 240 5% 40%; /* Medium grey for muted text */
+    --accent: 270 50% 55%;         /* Slightly richer lavender */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --border: 270 10% 90%;         /* Subtle lavender grey border */
+    --input: 270 10% 90%;
+    --ring: var(--accent);
+  }
+
+  .lavender.dark {
+    /* Dark Mode - Lavender */
+    --background: 240 10% 10%;     /* Dark grey */
+    --foreground: 240 10% 85%;     /* Light grey */
+    --primary: 270 40% 70%;        /* Lighter elegant lavender */
+    --primary-foreground: 240 10% 15%; /* Dark text on primary */
+    --secondary: 240 10% 20%;      /* Lighter dark grey */
+    --secondary-foreground: var(--foreground);
+    --muted: 240 10% 25%;           /* Even lighter dark grey */
+    --muted-foreground: 240 5% 60%; /* Medium grey for muted text */
+    --accent: 270 50% 75%;         /* Brighter lavender */
+    --accent-foreground: 240 10% 15%; /* Dark text on accent */
+    --border: 240 10% 30%;         /* Moderate dark grey border */
+    --input: 240 10% 30%;
+    --ring: var(--accent);
+  }
+}
+
+/* --- Soft Sunset Palette --- */
+@layer base {
+  .sunset:root {
+    /* Light Mode - Sunset */
+    --background: 30 20% 95%;      /* Soft warm beige */
+    --foreground: 30 20% 15%;     /* Warm dark grey */
+    --primary: 10 70% 60%;        /* Deep terracotta */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 30 10% 92%;      /* Soft warm light beige */
+    --secondary-foreground: var(--foreground);
+    --muted: 30 5% 95%;           /* Lighter beige grey */
+    --muted-foreground: 240 5% 40%; /* Medium grey for muted text */
+    --accent: 14 80% 55%;         /* Rich coral */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --border: 30 10% 80%;         /* Subtle warm border */
+    --input: 30 10% 80%;
+    --ring: var(--accent);
+  }
+
+  .sunset.dark {
+    /* Dark Mode - Sunset */
+    --background: 30 20% 10%;     /* Dark warm grey */
+    --foreground: 30 20% 85%;     /* Warm light grey */
+    --primary: 10 70% 70%;        /* Softer terracotta */
+    --primary-foreground: 30 20% 15%; /* Dark text on primary */
+    --secondary: 30 10% 20%;      /* Lighter dark grey */
+    --secondary-foreground: var(--foreground);
+    --muted: 30 10% 25%;           /* Even lighter dark grey */
+    --muted-foreground: 30 5% 60%; /* Medium grey for muted text */
+    --accent: 14 80% 65%;         /* Brighter coral */
+    --accent-foreground: 30 20% 15%; /* Dark text on accent */
+    --border: 30 10% 30%;         /* Moderate dark grey border */
+    --input: 30 10% 30%;
+    --ring: var(--accent);
+  }
+}
+
+/* --- Midnight Blue Palette --- */
+@layer base {
+  .midnight:root {
+    /* Light Mode - Midnight */
+    --background: 220 10% 97%;      /* Very pale blue */
+    --foreground: 220 15% 20%;     /* Slate blue */
+    --primary: 220 50% 50%;        /* Blue-grey */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 220 10% 92%;      /* Soft blue-grey */
+    --secondary-foreground: var(--foreground);
+    --muted: 220 5% 95%;           /* Light blue-grey */
+    --muted-foreground: 220 5% 40%; /* Medium grey for muted text */
+    --accent: 200 60% 55%;         /* Cool cyan */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --border: 220 10% 90%;         /* Subtle blue-grey border */
+    --input: 220 10% 90%;
+    --ring: var(--accent);
+  }
+
+  .midnight.dark {
+    /* Dark Mode - Midnight */
+    --background: 220 10% 12%;     /* Deep navy */
+    --foreground: 220 10% 85%;     /* Light slate */
+    --primary: 220 50% 70%;        /* Lighter blue-grey */
+    --primary-foreground: 220 10% 15%; /* Dark text on primary */
+    --secondary: 220 10% 20%;      /* Lighter dark blue-grey */
+    --secondary-foreground: var(--foreground);
+    --muted: 220 10% 25%;           /* Even lighter dark blue-grey */
+    --muted-foreground: 220 5% 60%; /* Medium grey for muted text */
+    --accent: 200 60% 65%;         /* Brighter cyan */
+    --accent-foreground: 220 10% 15%; /* Dark text on accent */
+    --border: 220 10% 30%;         /* Moderate dark blue-grey border */
+    --input: 220 10% 30%;
+    --ring: var(--accent);
+  }
+}
+
+/* --- Sage Green Palette --- */
+@layer base {
+  .sage:root {
+    /* Light Mode - Sage */
+    --background: 120 10% 95%;      /* Soft sage */
+    --foreground: 120 15% 25%;     /* Earthy olive */
+    --primary: 120 35% 45%;        /* Muted green */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 120 10% 92%;      /* Light sage */
+    --secondary-foreground: var(--foreground);
+    --muted: 120 5% 95%;           /* Even lighter sage */
+    --muted-foreground: 240 5% 40%; /* Medium grey for muted text */
+    --accent: 100 40% 50%;         /* Olive green */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --border: 120 10% 85%;         /* Subtle green border */
+    --input: 120 10% 85%;
+    --ring: var(--accent);
+  }
+
+  .sage.dark {
+    /* Dark Mode - Sage */
+    --background: 120 10% 10%;     /* Dark sage */
+    --foreground: 120 10% 85%;     /* Light sage */
+    --primary: 120 35% 65%;        /* Softer muted green */
+    --primary-foreground: 120 10% 15%; /* Dark text on primary */
+    --secondary: 120 10% 20%;      /* Lighter dark sage */
+    --secondary-foreground: var(--foreground);
+    --muted: 120 10% 25%;           /* Darker muted sage */
+    --muted-foreground: 120 5% 60%; /* Medium grey for muted text */
+    --accent: 100 40% 55%;         /* Brighter olive green */
+    --accent-foreground: 120 10% 15%; /* Dark text on accent */
+    --border: 120 10% 30%;         /* Moderate dark green border */
+    --input: 120 10% 30%;
+    --ring: var(--accent);
   }
 }
 

@@ -4,7 +4,7 @@ import { useTheme } from '../theme-provider';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
-import ThemeToggle from '@/components/ui/ThemeToggle'; // Import the new component
+import ModeToggle from '@/components/ui/ModeToggle';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -35,7 +35,7 @@ function Header() {
             <span className={`font-bold text-2xl`}>Agilarasu Saravanan</span>
           </div>
           <nav className="flex items-center gap-4">
-            <ThemeToggle />
+            <ModeToggle />
 
             {/* Mobile Menu Trigger */}
             <Sheet open={isNavOpen} onOpenChange={setIsNavOpen}>
