@@ -29,7 +29,7 @@ export default function ConnectWithMe() {
   return (
     <section className="container mx-auto w-full py-20">
       <div className="flex flex-col items-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[hsl(var(--accent-background))]">Connect With Me</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[hsl(var(--accent))]">Connect With Me</h2>
         <p className="text-center text-muted-foreground mb-12">
           Find me on these platforms and let's connect!
         </p>
