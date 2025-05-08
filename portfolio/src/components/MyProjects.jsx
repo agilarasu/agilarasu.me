@@ -17,42 +17,46 @@ import {
 import clashofclans from "../assets/clashofclans_assets/clashofclans_screen2018_summer.webp";
 import geminipdf from "../assets/gemini.png";
 import personalSite from "../assets/personalSite.png";
+import atoms from "../assets/atoms.png";
+import quizchat from "../assets/quizchat.png";
+import mltext from "../assets/mltext.png";
+
 const projects = [
   {
-    name: "Clashinfo - Clash of Clans API Wrapper",
-    image: clashofclans,
-    description: "A Python Wrapper for interacting with the Clash of Clans API.",
-    link: "https://pypi.org/project/clashpy/",
+    name: "Atoms - AI Powered Learning",
+    image: atoms,
+    description: "A learning platform that helps users learn a concept with the help of LLMs.",
+    link:"https://atoms-chi.vercel.app/"
   },
   {
     name: "Gemini PDF Chat",
     image: geminipdf,
-    description: "An RAG for retrieving and generating information from PDFs using Gemini API.",
+    description: "A RAG-based application that uses Gemini API to extract and generate insights from PDF documents.",
     link: "https://github.com/agilarasu/gemini_pdf_chat",
   },
   {
-    name: "Python PWA Installer",
-    image: "/placeholder.svg?height=192&width=384",
-    description: "A Python script to convert any website into a Progressive Web App (PWA).",
-    link: "https://github.com/agilarasu/pwa_maker",
+    name: "Grammar Check & Text Suggestion",
+    image: mltext,
+    description: "A machine learning model that offers real-time grammar correction and text suggestions.",
+    link: "https://github.com/agilarasu/text-suggestion" 
   },
   {
-    name: "Windows Dock",
-    image: "/placeholder.svg?height=192&width=384",
-    description: "A customizable dock for Windows, inspired by GNOME dock features.",
-    link: "https://github.com/agilarasu/windows-dock",
-  },
-  {
-    name: "Personal Site",
+    name: "Portfolio Site",
     image: personalSite,
-    description: "A personal Site developed using React.js.",
-    link: "https://agilarasu.github.io",
+    description: "A personal portfolio website built with React.js and Tailwind CSS",
+    link: "https://github.com/agilarasu/agilarasu.github.io",
   },
   {
-    name: "Heimdall - AI-Powered Penetration Testing",
-    image: "/placeholder.svg?height=192&width=384",
-    description: "An advanced penetration testing tool leveraging AI to identify vulnerabilities. (Currently in a private repository due to security concerns)",
-    link: "https://github.com/agilarasu/heimdall",
+    name: "Quiz Chat",
+    image: quizchat,
+    description: "An interactive chat-based quiz system powered by a LLM.",
+    link: "https://quiz-chat.vercel.app/",
+  },
+  {
+    name: "Clashinfo - Clash of Clans API Wrapper",
+    image: clashofclans,
+    description: "A Python wrapper library for interaction with the Clash of Clans API.",
+    link: "https://pypi.org/project/clashpy/",
   },
 ];
 
@@ -60,13 +64,12 @@ export default function MyProjects() {
   return (
     <section className="container mx-auto w-full py-16">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-blue-500">My Projects</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[hsl(var(--accent))]">My Projects</h2>
         <p className="text-muted-foreground mt-2">
-          Check out some of the projects I've worked on. From web apps to mobile
-          experiences, I've got a diverse portfolio.
+          Check out some of the projects I've worked on. From web apps to ML Models.
         </p>
       </div>
-      <div className="w-[80%] md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="w-[80%] md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <Card key={index} className="bg-card overflow-hidden">
             <img
@@ -76,7 +79,7 @@ export default function MyProjects() {
               style={{ maxWidth: "100%", maxHeight: "100%" }}
             />
             <CardHeader>
-              <CardTitle>{project.name}</CardTitle>
+              <CardTitle className="text-[hsl(var(--primary))]">{project.name}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
@@ -85,7 +88,7 @@ export default function MyProjects() {
 
               <Drawer>
                 <DrawerTrigger>
-                  <Button variant="outline" asChild>
+                  <Button variant="outline"  className="text-[hsl(var(--primary))]" asChild>
                     <a className="w-full">
                       View Project <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
