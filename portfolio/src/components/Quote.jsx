@@ -12,10 +12,10 @@ export default function QuoteSection(
           <p
             className="text-xl md:text-2xl leading-relaxed font-medium px-10 py-8"
           >
-            "Be yourself; everyone else is already taken."
+            "Sometimes you've gotta run before you can walk"
           </p>
 
-          <p className="text-right mt-4 pr-10">-Oscar Wilde </p>
+          <p className="text-right mt-4 pr-10">-Tony Stark </p>
         </CardContent>
       </Card>
     </section>
