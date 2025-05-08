@@ -55,9 +55,9 @@ function App() {
         <div id="Certifications">
           <Certifications />
         </div>
-        <div id="quote">
+        {/* <div id="quote">
           <QuoteSection />
-        </div>
+        </div> */}
         <div id="connect">
           <ConnectWithMe />
         </div>
