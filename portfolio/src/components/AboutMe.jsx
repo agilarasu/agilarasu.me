@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import img from "@/assets/mu.jpeg";
 export default function AboutMe() {
   return (
     <section className="w-full md:w-[90%] lg:w-[80%] mx-auto py-12 md:py-24 lg:py-32 flex items-center min-h-[70vh]">
@@ -16,7 +16,7 @@ export default function AboutMe() {
             </div>
             <div className="mt-6 lg:mt-0 flex justify-center">
               <img 
-                src="/src/assets/mu.jpeg" 
+                src={img} 
                 alt="Profile image" 
                 className="rounded-lg shadow-lg max-h-[400px] object-cover"
               />
