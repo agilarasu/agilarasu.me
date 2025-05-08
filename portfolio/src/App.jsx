@@ -8,33 +8,34 @@ import MySkills from './components/Skills';
 import MyProjects from './components/MyProjects';
 import ConnectWithMe from './components/ConnectWithMe';
 import { Link } from "react-scroll";
+import { ThemeProvider } from './theme-provider';
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <Header primary="white" secondary="green-600" background="black" buttonColor="green-600" />
-     
-
-      {/* Add IDs outside the component to ensure scroll works */}
-      <div id="home">
-        <Intro primary="white" secondary="green-600" background="black" buttonColor="green-600" />
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-foreground">
+        <Header />
+        {/* Add IDs outside the component to ensure scroll works */}
+        <div id="home">
+          <Intro />
+        </div>
+        <div id="quote">
+          <QuoteSection />
+        </div>
+        <div id="about">
+          <AboutMe />
+        </div>
+        <div id="skills">
+          <MySkills />
+        </div>
+        <div id="projects">
+          <MyProjects />
+        </div>
+        <div id="connect">
+          <ConnectWithMe />
+        </div>
       </div>
-      <div id="quote">
-        <QuoteSection primary="white" secondary="green-600" background="slate-500" />
-      </div>
-      <div id="about">
-        <AboutMe primary="white" secondary="green-600" background="black" />
-      </div>    
-      <div id="skills">
-        <MySkills primary="white" secondary="green-600" background="black" />
-      </div>
-      <div id="projects">
-        <MyProjects primary="white" secondary="green-600" background="black" />
-      </div>
-      <div id="connect">
-        <ConnectWithMe primary="white" secondary="green-600" background="black" />
-      </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

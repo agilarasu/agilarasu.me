@@ -73,7 +73,7 @@ export default function MyProjects() {
               src={project.image}
               alt={project.name}
               className="w-full h-48 object-cover transition-opacity duration-300 hover:opacity-75"
-              style={{ maxWidth: "100%", maxHeight: "100%" }} // Add this line to limit the image size
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
             />
             <CardHeader>
               <CardTitle>{project.name}</CardTitle>

@@ -5,14 +5,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import img from "@/assets/img.jpg";
-export default function Intro({
-  primary = "white",
-  secondary = "white-600",
-  background = "black",
-  buttonColor = "white-600",
-}) {
+
+export default function Intro() {
   const [currentProfession, setCurrentProfession] = useState(0);
-  const professions = ["Indie Hacker","Security Researcher", "Backend Developer"];
+  const professions = ["Student", "Fullstack Developer", "Security Researcher"];
   const professionRef = useRef(null);
 
   useEffect(() => {
@@ -36,10 +32,10 @@ export default function Intro({
 
   return (
     <section
-      className={`w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4 bg-${background}`}
+      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
     >
       <div
-        className={`text-center md:text-left mb-8 md:mb-0 w-full md:w-1/2 text-${primary}`}
+        className="text-center md:text-left mb-8 md:mb-0 w-full md:w-1/2"
       >
         <h1 className="text-3xl md:text-6xl font-bold mb-4">
           Hi 👋
@@ -51,7 +47,7 @@ export default function Intro({
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
           <Link to="connect" smooth={true} duration={500}>
             <Button
-              className={`bg-white text-black px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4`}
+              className="bg-white text-black px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
             >
               Get in touch
             </Button>
@@ -67,7 +63,7 @@ export default function Intro({
 
       <div className="w-full md:w-1/2">
         <div
-          className={`rounded-full bg-white w-36 h-36 md:w-72 md:h-72 mx-auto relative flex items-center justify-center`}
+          className="rounded-full bg-white w-36 h-36 md:w-72 md:h-72 mx-auto relative flex items-center justify-center"
         >
           <Avatar className="w-32 h-32 md:w-64 md:h-64 border-4 border-gray-600">
             <AvatarImage src={img} alt="Profile picture" />
