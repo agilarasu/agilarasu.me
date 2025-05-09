@@ -1,5 +1,5 @@
 import React from "react";
-import img from "@/assets/mu.jpeg";
+import img from "@/assets/about.jpg";
 export default function AboutMe() {
   return (
     <section className="w-full md:w-[90%] lg:w-[80%] mx-auto py-12 md:py-24 lg:py-32 flex items-center min-h-[70vh] py-20">
