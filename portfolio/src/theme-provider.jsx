@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // Available themes/palettes from the CSS
-const PALETTES = ['lavender', 'sunset', 'midnight', 'sage'];
+const PALETTES = ['lavender', 'sunset', 'midnight', 'sage', 'sunsetBerry'];
 
 const ThemeContext = createContext({
   mode: 'dark',

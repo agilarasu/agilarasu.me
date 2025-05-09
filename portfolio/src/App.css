@@ -248,6 +248,44 @@ body {
   }
 }
 
+
+/* --- Sunset Berry Palette --- */
+@layer base {
+  .sunsetBerry:root {
+    /* Light Mode - Sunset Berry */
+    --background: 250 5% 98%;      /* Very pale greyish purple */
+    --foreground: 250 10% 15%;     /* Dark greyish purple */
+    --primary: 324 52% 56%;        /* #C95792 - Vibrant Pink/Magenta */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 284 30% 39%;      /* #7C4585 - Mid-tone Purple */
+    --secondary-foreground: 0 0% 100%; /* White */
+    --muted: 250 5% 95%;           /* Light greyish purple */
+    --muted-foreground: 250 5% 40%; /* Medium grey */
+    --accent: 37 93% 67%;          /* #F8B55F - Warm Orange */
+    --accent-foreground: 250 10% 15%; /* Dark text on accent */
+    --border: 250 10% 90%;         /* Subtle greyish purple border */
+    --input: 250 10% 90%;
+    --ring: var(--accent);
+  }
+
+  .sunsetBerry.dark {
+    /* Dark Mode - Sunset Berry */
+    --background: 250 24% 29%;     /* #3D365C - Dark Purple */
+    --foreground: 250 10% 85%;     /* Light greyish purple */
+    --primary: 324 52% 56%;        /* #C95792 - Vibrant Pink/Magenta */
+    --primary-foreground: 250 10% 15%; /* Dark text on primary */
+    --secondary: 284 30% 39%;      /* #7C4585 - Mid-tone Purple */
+    --secondary-foreground: var(--foreground);
+    --muted: 250 10% 25%;           /* Lighter dark greyish purple */
+    --muted-foreground: 250 5% 60%; /* Medium grey */
+    --accent: 37 93% 67%;          /* #F8B55F - Warm Orange */
+    --accent-foreground: 250 10% 15%; /* Dark text on accent */
+    --border: 250 10% 30%;         /* Moderate dark greyish purple border */
+    --input: 250 10% 30%;
+    --ring: var(--accent);
+  }
+}
+
 /* Apply the theme variables using Tailwind classes */
 @layer base {
     * {
