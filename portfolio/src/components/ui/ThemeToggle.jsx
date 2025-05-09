@@ -16,10 +16,11 @@ const ThemeToggle = ({ className = '' }) => {
   return (
     <button
       onClick={cyclePalette}
-      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-all ${className}`}
+      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-all flex items-center group overflow-hidden ${className}`}
       aria-label={`Change color theme, current theme is ${paletteNames[palette]}`}
     >
-      <Palette className="h-6 w-6" />
+      <span className="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 group-hover:mr-2 whitespace-nowrap transition-all duration-300 overflow-hidden">Magic</span>
+      <Palette className="h-6 w-6 flex-shrink-0" />
       <span className="sr-only">Toggle theme palette</span>
     </button>
   );

@@ -69,12 +69,15 @@ function App() {
       {showScrollButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-20 right-6 bg-[hsl(var(--accent-foreground))] text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all z-50"
+          className="fixed bottom-20 right-6 bg-[hsl(var(--accent-foreground))] text-[hsl(var(--accent))] p-3 rounded-full shadow-lg hover:pl-4 hover:rounded-full group overflow-hidden transition-all duration-300 z-50"
           aria-label="Scroll to top"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
+          <div className="flex items-center">
+            <span className="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 group-hover:mr-2 whitespace-nowrap transition-all duration-300 overflow-hidden">Back to Top</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </div>
         </button>
       )}
     </ThemeProvider>
