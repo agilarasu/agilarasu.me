@@ -28,12 +28,12 @@ function Header() {
   const closeMenu = () => setIsNavOpen(false);
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 py-4 ${isScrolled ? 'bg-background/80 backdrop-blur-md' : 'bg-transparent'} transition-colors duration-300`}>
+    <header className={`fixed top-0 left-0 w-full z-50 p-4 ${isScrolled ? 'bg-background/80 backdrop-blur-md' : 'bg-transparent'} transition-colors duration-300`}>
       <div className="container mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center">
-          <div>
-            <span className={`font-bold text-2xl`}>Agilarasu Saravanan</span>
-          </div>
+          <Link to="home" smooth={true} duration={500} onClick={closeMenu} className="font-bold text-2xl cursor-pointer hover:text-primary transition-colors">
+              Agilarasu Saravanan
+          </Link>
           <nav className="flex items-center gap-4">
             <ModeToggle />
 
@@ -59,7 +59,7 @@ function Header() {
                   <Link to="skills" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer hover:text-primary transition-colors">
                     Skills
                   </Link>
-                   <Link to="connect" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer hover:text-primary transition-colors">
+                  <Link to="connect" smooth={true} duration={500} onClick={closeMenu} className="font-medium text-lg cursor-pointer hover:text-primary transition-colors">
                     Connect
                   </Link>
                 </div>
