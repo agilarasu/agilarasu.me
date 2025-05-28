@@ -1,43 +1,61 @@
 "use client";
 import { Link } from "react-scroll";
 import { ChevronDown } from "lucide-react";
-
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import img from "@/assets/me.png";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
 
 export default function Intro() {
-  const [currentProfession, setCurrentProfession] = useState(0);
-  const professions = ["Student", "Fullstack Developer", "Security Researcher"];
+  const nameRef = useRef(null);
   const professionRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentProfession(
-        (prevProfession) => (prevProfession + 1) % professions.length
-      );
-    }, 3000); // Change profession every 3 seconds
+    const splitName = new SplitText(nameRef.current, {
+      type: "words,lines",
+      linesClass: "lines",
+      mask: "lines"
+    });
 
-    return () => clearInterval(interval);
+    const splitProfession = new SplitText(professionRef.current, {
+      type: "words,lines",
+      linesClass: "lines",
+      mask: "lines"
+    });
+
+    const tl = gsap.timeline();
+
+    tl.from(splitName.words, {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "expo",
+    });
+
+    tl.from(splitProfession.words, {
+      y: -100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "expo",
+    }, "<");
+
+    return () => {
+      splitName.revert();
+      splitProfession.revert();
+    };
   }, []);
-
-  useEffect(() => {
-    if (professionRef.current) {
-      professionRef.current.style.animation = "slideDown 0.5s ease-in-out";
-      setTimeout(() => {
-        professionRef.current.style.animation = "";
-      }, 500); // Reset animation after it completes
-    }
-  }, [currentProfession]);
 
   return (
     <section
       className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
     >
-      <div className="w-full md:w-1/3">
+      <div className="w-full md:w-1/3 flex items-center justify-center mb-8 md:mb-0">
         <div
-          className="rounded-full w-64 h-64 md:w-72 md:h-72 mx-auto relative flex items-center justify-center"
+          className="rounded-full w-64 h-64 md:w-72 md:h-72 relative flex items-center justify-center"
         >
           <Avatar className="w-60 h-60 md:w-64 md:h-64 border-4 border-[hsl(var(--border))]">
             <AvatarImage src={img} alt="Profile picture" />
@@ -51,17 +69,17 @@ export default function Intro() {
       <div
         className="text-center md:text-left md:mb-0"
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <h1 ref={nameRef} className="text-4xl md:text-6xl font-bold my-6">
           <span className="text-3xl md:text-3xl text-[hsl(var(--foreground))]">Hi 👋</span>
-          <br /> I'm <span className={`font-extrabold text-[hsl(var(--accent))]`}>Agilarasu</span>
+          <br /> I'm <span className={`font-extrabold text-[hsl(var(--accent))]`}>AGILARASU</span>
         </h1>
         <p ref={professionRef} className="text-lg md:text-xl mb-6">
-          {professions[currentProfession]}
+          Full Stack Developer
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
           <Link to="connect" smooth={true} duration={500}>
             <Button
-            variant="outline"
+              variant="outline"
               className="bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
             >
               Let's Connect
@@ -70,7 +88,7 @@ export default function Intro() {
           <Button
             variant="outline"
             className="bg-[hsl(var(--accent-background))] text-[hsl(var(--accent))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
-            >
+          >
             <span className="block md:hidden">Get Resume</span>
             <span className="hidden md:block">Download Resume</span>
           </Button>
