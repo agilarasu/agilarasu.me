@@ -53,11 +53,11 @@ export default function Intro() {
     <section
       className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
     >
-      <div className="w-full md:w-1/3 flex items-center justify-center mb-8 md:mb-0">
+      <div className="w-full md:w-1/4 flex items-center justify-center">
         <div
           className="rounded-full w-64 h-64 md:w-72 md:h-72 relative flex items-center justify-center"
         >
-          <Avatar className="w-60 h-60 md:w-64 md:h-64 border-4 border-[hsl(var(--border))]">
+          <Avatar className="w-60 h-60 md:w-72 md:h-72 border-4 border-[hsl(var(--border))]">
             <AvatarImage src={img} alt="Profile picture" />
             <AvatarFallback>AG</AvatarFallback>
           </Avatar>

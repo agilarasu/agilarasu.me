@@ -29,7 +29,7 @@ function Header() {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 p-4 ${isScrolled ? 'bg-background/80 backdrop-blur-md' : 'bg-transparent'} transition-colors duration-300`}>
-      <div className="container mx-auto px-4 md:px-0">
+      <div className="container mx-auto md:px-9">
         <div className="flex justify-between items-center">
           <Link to="home" smooth={true} duration={500} onClick={closeMenu} className="font-bold text-2xl cursor-pointer hover:text-primary transition-colors">
               Agilarasu Saravanan
