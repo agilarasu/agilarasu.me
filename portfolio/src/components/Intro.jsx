@@ -5,10 +5,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import img from "@/assets/me.png";
+
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrollToPlugin);
 
 export default function Intro() {
   const nameRef = useRef(null);
@@ -49,6 +51,26 @@ export default function Intro() {
     };
   }, []);
 
+  function handleScrollToConnect() {
+    gsap.to(window, {
+      scrollTo: {
+        y: "#connect",
+      },
+      duration: 2,
+      ease: "power2.inOut",
+    });
+  }
+
+  function handleScrollToAbout() {
+    gsap.to(window, {
+      scrollTo: {
+        y: "#about",
+      },
+      duration: 1.5,
+      ease: "power2.inOut",
+    });
+  }
+
   return (
     <section
       className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
@@ -77,14 +99,13 @@ export default function Intro() {
           Full Stack Developer
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start">
-          <Link to="connect" smooth={true} duration={500}>
-            <Button
-              variant="outline"
-              className="bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
-            >
-              Let's Connect
-            </Button>
-          </Link>
+          <Button
+            onClick={handleScrollToConnect}
+            variant="outline"
+            className="bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
+          >
+            Let's Connect
+          </Button>
           <Button
             variant="outline"
             className="bg-[hsl(var(--accent-background))] text-[hsl(var(--accent))] px-6 py-3 rounded-full transform transition-transform duration-300 hover:scale-105 hover:shadow-lg mb-2 md:mb-0 md:mr-4"
@@ -97,11 +118,10 @@ export default function Intro() {
 
       {/* Scroll Down Button */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <Link to="about" smooth={true} duration={500}>
-          <ChevronDown
-            className="w-10 h-10 text-[hsl(var(--accent))] cursor-pointer animate-bounce"
-          />
-        </Link>
+        <ChevronDown
+          onClick={handleScrollToAbout}
+          className="w-10 h-10 text-[hsl(var(--accent))] cursor-pointer animate-bounce"
+        />
       </div>
     </section>
   );

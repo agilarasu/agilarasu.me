@@ -8,9 +8,11 @@ import MySkills from './components/Skills';
 import MyProjects from './components/MyProjects';
 import Certifications from './components/Certifications';
 import ConnectWithMe from './components/ConnectWithMe';
-import { Link } from "react-scroll";
 import { ThemeProvider } from './theme-provider';
 import ThemeToggle from './components/ui/ThemeToggle';
+import gsap from 'gsap';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollToPlugin);
 
 function App() {
   const [showScrollButton, setShowScrollButton] = React.useState(false);
@@ -29,10 +31,7 @@ function App() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    gsap.to(window, { scrollTo: "#home", ease: "power2.out", duration: 2 });
   };
 
   return (
