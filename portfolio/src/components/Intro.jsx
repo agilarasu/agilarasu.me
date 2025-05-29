@@ -73,7 +73,7 @@ export default function Intro() {
 
   return (
     <section
-      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
+      className="w-[80%] mx-auto container w-full flex flex-col md:flex-row items-center justify-center min-h-screen px-4 relative"
     >
       <div className="w-full md:w-1/4 flex items-center justify-center">
         <div
