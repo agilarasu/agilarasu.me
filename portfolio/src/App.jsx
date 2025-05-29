@@ -10,10 +10,9 @@ import ConnectWithMe from './components/ConnectWithMe';
 import { ThemeProvider } from './theme-provider';
 import ThemeToggle from './components/ui/ThemeToggle';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollSmoother);
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
