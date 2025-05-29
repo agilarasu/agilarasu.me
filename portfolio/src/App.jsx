@@ -11,8 +11,10 @@ import { ThemeProvider } from './theme-provider';
 import ThemeToggle from './components/ui/ThemeToggle';
 import gsap from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// Do not remove ScrollTrigger, I don't know why but it is required for ScrollSmoother to work properly
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
