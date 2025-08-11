@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FaPython, FaReact } from "react-icons/fa"
 import { DiJsBadge } from "react-icons/di"
 import { SiTailwindcss, SiDocker, SiTypescript, SiNextdotjs, SiFastapi, SiMongodb, SiPostgresql, SiVercel, SiMicrosoftazure, SiLangchain } from "react-icons/si"
+import { FaAws } from "react-icons/fa"
 
 const skills = [
   {
@@ -56,14 +57,14 @@ const skills = [
     description: 'Cloud infrastructure and service management.'
   },
   {
+    name: 'AWS',
+    icon: FaAws,
+    description: 'Experience with AWS for cloud services.'
+  },
+  {
     name: 'Langchain',
     icon: SiLangchain,
     description: 'Experience with Langchain for building AI applications.'
-  },
-  {
-    name: 'GSAP',
-    icon: () => <span className="text-[hsl(var(--foreground))]">GSAP</span>, // Placeholder for GSAP icon
-    description: 'Experience with GSAP for animations and transitions.'
   },
   {
     name: 'Tailwind CSS',

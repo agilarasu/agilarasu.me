@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLinkedinIn, FaXTwitter, FaGoodreads } from 'react-icons/fa6';
 import { SiLeetcode } from "react-icons/si";
 
 const socials = [
@@ -12,6 +12,11 @@ const socials = [
     name: 'LinkedIn',
     icon: FaLinkedinIn,
     link: 'www.linkedin.com/in/agilarasu'
+  },
+  {
+    name: 'Goodreads',
+    icon: FaGoodreads,
+    link: 'www.goodreads.com/agilarasu'
   },
   {
     name: 'Leetcode',
@@ -33,7 +38,7 @@ export default function ConnectWithMe() {
         <p className="text-center text-muted-foreground mb-12">
           Find me on these platforms and let's connect!
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {socials.map((social, index) => (
             <a href={`https://${social.link}`} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center">
               <social.icon className="w-12 h-12 mb-4 text-[hsl(var(--accent-background))]" />
