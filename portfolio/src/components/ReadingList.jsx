@@ -8,47 +8,53 @@ const ReadingList = () => {
   // Book recommendations and suggestions
   const bookSuggestions = [
     {
-      title: "The Pragmatic Programmer",
-      author: "David Thomas, Andrew Hunt",
+      title: "A Man Called Ove",
+      author: "Fredrik Backman",
       rating: 5,
-      genre: "Programming",
-      recommendation: "Essential for any developer. Changed how I think about code quality and professional development."
+      genre: "Fiction",
+      recommendation: "A heartwarming story about a grumpy old man who learns to love again.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405259930i/18774964.jpg"
     },
     {
-      title: "Sapiens",
-      author: "Yuval Noah Harari",
+      title: "Outliers",
+      author: "Malcolm Gladwell",
       rating: 5,
-      genre: "History",
-      recommendation: "Fascinating perspective on human history and the cognitive revolution. Eye-opening read."
+      genre: "Non-Fiction",
+      recommendation: "A fascinating look at the factors that contribute to success.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1344266315i/3228917.jpg"
     },
     {
-      title: "Clean Code",
-      author: "Robert C. Martin",
+      title: "The Almanack of Naval Ravikant",
+      author: "Eric Jorgenson",
       rating: 5,
-      genre: "Programming",
-      recommendation: "A must-read for writing maintainable, readable code. Every programmer should have this."
+      genre: "Non-Fiction",
+      recommendation: "A collection of quotes from Naval Ravikant, a venture capitalist and founder of AngelList.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598011736i/54898389.jpg"
     },
     {
-      title: "The Design of Everyday Things",
-      author: "Don Norman",
-      rating: 4,
-      genre: "Design",
-      recommendation: "Great insights into user-centered design and how design affects daily interactions."
+      title: "Source Code: My Beginnings",
+      author: "Bill Gates",
+      rating: 5,
+      genre: "Non-Fiction",
+      recommendation: "Bill Gates's memoir is a fascinating look at his life and the history of Microsoft.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1719004398i/213034913.jpg"
+    },
+    {
+      title: "Britt-Marie Was Here",
+      author: "Fredrik Backman",
+      rating: 5,
+      genre: "Fiction",
+      recommendation: "A heartwarming story about a woman who learns to love again.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1460442061i/27406704.jpg"
     },
     {
       title: "Atomic Habits",
       author: "James Clear",
       rating: 5,
       genre: "Self-Help",
-      recommendation: "Practical framework for building good habits and breaking bad ones. Highly actionable."
+      recommendation: "Practical framework for building good habits and breaking bad ones. Highly actionable.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg"
     },
-    {
-      title: "System Design Interview",
-      author: "Alex Xu",
-      rating: 4,
-      genre: "Programming",
-      recommendation: "Excellent resource for understanding large-scale system architecture and design patterns."
-    }
   ];
 
   const StarRating = ({ rating }) => {
@@ -82,14 +88,17 @@ const ReadingList = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {bookSuggestions.map((book, index) => (
-            <Card key={index} className="border-border bg-card shadow-sm hover:shadow-md transition-all duration-200 flex flex-col">
-              <img 
-                src={placeholder}
-                alt={book.title}
-                className="w-full h-48 object-cover rounded-t-lg"
-              />
+            <Card key={index} className="border-border bg-card shadow-sm hover:shadow-md transition-all duration-200 flex flex-row">
+              <div className="relative flex-shrink-0 w-28 sm:w-32 md:w-36 lg:w-40 aspect-[2/3] overflow-hidden rounded-l-xl bg-muted">
+                <img
+                  src={book.image || placeholder}
+                  alt={book.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
               <CardContent className="p-6 flex flex-col flex-grow">
                 <h4 className="font-bold text-foreground text-lg">{book.title}</h4>
                 <p className="text-muted-foreground text-sm mb-2">by {book.author}</p>

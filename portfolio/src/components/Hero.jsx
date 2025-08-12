@@ -12,6 +12,7 @@ const Hero = ({
   videoPoster = placeholder,
 } = {}) => {
   const heroRef = useRef(null);
+  const backgroundVideoRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const imageRef = useRef(null);
@@ -75,6 +76,24 @@ const Hero = ({
     }
   }, []);
 
+  // Ensure background video autoplays across browsers (Safari/iOS needs explicit muted+play)
+  useEffect(() => {
+    const video = backgroundVideoRef.current;
+    if (!video) return;
+    try {
+      video.muted = true;
+      // Some browsers require a direct play() call even with autoplay
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.then === 'function') {
+        playPromise.catch(() => {
+          // Ignore autoplay rejection; user interaction will start it
+        });
+      }
+    } catch (_) {
+      // No-op
+    }
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -89,11 +108,13 @@ const Hero = ({
     >
       {/* Background video */}
       <video
+        ref={backgroundVideoRef}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         aria-hidden="true"
         poster={videoPoster}
       >
@@ -101,7 +122,7 @@ const Hero = ({
       </video>
 
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-background/60 pointer-events-none" />
+      <div className="absolute inset-0  pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">

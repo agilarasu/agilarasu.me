@@ -70,13 +70,13 @@ const FeaturedProjects = () => {
   ];
 
   const ProjectCard = ({ project, isMain = false }) => (
-    <Card className={`project-card group hover:shadow-xl transition-all duration-300 border border-border bg-card ${isMain ? 'row-span-2' : ''} hover:scale-105`}>
+    <Card className={`project-card group hover:shadow-xl transition-all duration-300 border border-border bg-card ${isMain ? 'row-span-2' : ''} `}>
       {project.image && (
         <div className="relative overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
-            className={`w-full object-cover transition-transform duration-300 group-hover:scale-105 ${isMain ? 'h-64' : 'h-48'}`}
+            className={`w-full object-cover transition-transform duration-300 group- ${isMain ? 'h-64' : 'h-48'}`}
           />
           {project.featured && (
             <div className="absolute top-4 left-4 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
@@ -113,7 +113,7 @@ const FeaturedProjects = () => {
           {project.liveUrl && (
             <Button
               size="sm"
-              className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 "
               asChild
             >
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -126,7 +126,7 @@ const FeaturedProjects = () => {
             <Button
               size="sm"
               variant="outline"
-              className="border-border text-foreground hover:bg-muted transition-all duration-300 hover:scale-105"
+              className="border-border text-foreground hover:bg-muted transition-all duration-300 "
               asChild
             >
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -144,7 +144,7 @@ const FeaturedProjects = () => {
     <div className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A collection of projects that showcase my passion for building innovative solutions 
@@ -175,7 +175,7 @@ const FeaturedProjects = () => {
         <div className="text-center mt-12 fade-in">
           <Button
             variant="outline"
-            className="border-border text-foreground hover:bg-muted px-6 py-3 transition-all duration-300 hover:scale-105"
+            className="border-border text-foreground hover:bg-muted px-6 py-3 transition-all duration-300 "
             asChild
           >
             <a href="https://github.com/agilarasu" target="_blank" rel="noopener noreferrer">
