@@ -1,45 +1,17 @@
-import React from 'react';
-import { Sun, Moon } from 'lucide-react';
-import { useTheme } from '../../theme-provider'; // Adjust path as needed
+import * as React from "react"
+import { Moon, Sun } from "lucide-react"
 
-const ModeToggle = ({ className = '' }) => {
-  const { mode, toggleMode } = useTheme();
-  const isDark = mode === 'dark';
+import { useTheme } from "@/theme-provider"
+import { Button } from "@/components/ui/button"
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleMode();
-    }
-  };
+export function ModeToggle() {
+  const { mode, toggleMode } = useTheme()
 
   return (
-    <button
-      type="button"
-      role="switch"
-      aria-checked={isDark}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      onClick={toggleMode}
-      onKeyDown={handleKeyDown}
-      className={`relative inline-flex items-center h-6 w-12 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
-        ${isDark ? 'bg-slate-700 focus:ring-offset-slate-900' : 'bg-slate-200 focus:ring-offset-white'}
-        ${className}`}
-    >
+    <Button variant="ghost" size="icon" onClick={toggleMode}>
+      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span className="sr-only">Toggle theme</span>
-
-      {/* Slider Handle with Icon */}
-      <span
-        className={`flex items-center justify-center h-5 w-5 transform bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out
-          ${isDark ? 'translate-x-7' : 'translate-x-1'}`}
-      >
-        {isDark ? (
-          <Moon className="h-3 w-3 text-gray-500" aria-hidden="true" />
-        ) : (
-          <Sun className="h-3 w-3 text-yellow-400" aria-hidden="true" />
-        )}
-      </span>
-    </button>
-  );
-};
-
-export default ModeToggle;
+    </Button>
+  )
+}

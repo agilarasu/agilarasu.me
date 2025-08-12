@@ -16,12 +16,12 @@ export function ThemeProvider({ children }) {
   // Split theme into mode (light/dark) and palette (lavender, sunset, etc.)
   const [mode, setMode] = useState(() => {
     const storedMode = localStorage.getItem('vite-ui-mode');
-    return storedMode || 'dark'; // Default to 'dark' if nothing is stored
+    return storedMode || 'light'; // Default to 'dark' if nothing is stored
   });
   
   const [palette, setPalette] = useState(() => {
     const storedPalette = localStorage.getItem('vite-ui-palette');
-    return storedPalette || 'sage'; // Default to 'lavender' if nothing is stored
+    return storedPalette || 'sage'; // Default to 'midnight' if nothing is stored
   });
 
   useEffect(() => {
