@@ -102,11 +102,13 @@ const ReadingList = () => {
               <CardContent className="p-6 flex flex-col flex-grow">
                 <h4 className="font-bold text-foreground text-lg">{book.title}</h4>
                 <p className="text-muted-foreground text-sm mb-2">by {book.author}</p>
-                <div className="flex justify-between items-center mb-3">
-                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">
+                <div className="flex flex-col gap-2 mt-3">
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs w-fit">
                     {book.genre}
                   </span>
-                  <StarRating rating={book.rating} />
+                  <div className="flex items-center">
+                    <StarRating rating={book.rating} />
+                  </div>
                 </div>
                 <p className="text-muted-foreground text-sm italic mt-auto">
                   "{book.recommendation}"

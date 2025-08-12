@@ -37,7 +37,7 @@ const About = () => {
                   <p className="leading-relaxed mb-4">
                     I'm a <strong className="text-foreground">final year IT student</strong> passionate about developing impactful technology solutions. 
                     My expertise spans across <strong className="text-foreground">Artificial Intelligence, Web Development,</strong> and 
-                    <strong className="text-foreground">Cybersecurity</strong>, driven by an insatiable curiosity to explore emerging technologies.
+                    <strong className="text-foreground"> Cybersecurity</strong>, driven by an insatiable curiosity to explore emerging technologies.
                   </p>
                   <p className="leading-relaxed">
                     Currently, I'm gaining hands-on experience as an ML intern at Aivar Innovation in Coimbatore, 

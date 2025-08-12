@@ -112,7 +112,7 @@ const Entertainment = () => {
                 </div>
                 <CardContent className="p-6 flex flex-col flex-grow min-w-0">
                   <h4 className="font-bold text-foreground">{game.title}</h4>
-                  <p className="text-muted-foreground text-sm mt-1 flex-grow break-words">{game.description}</p>
+                  <p className="text-muted-foreground text-sm mt-1 break-words">{game.description}</p>
                   <div className="flex flex-col gap-2 mt-3">
                     <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs w-fit">{game.genre}</span>
                     <div className="flex items-center">
@@ -143,7 +143,7 @@ const Entertainment = () => {
                 </div>
                 <CardContent className="p-6 flex flex-col flex-grow min-w-0">
                   <h4 className="font-bold text-foreground">{movie.title}</h4>
-                  <p className="text-muted-foreground text-sm mt-1 flex-grow break-words">{movie.description}</p>
+                  <p className="text-muted-foreground text-sm mt-1 break-words">{movie.description}</p>
                   <div className="flex flex-col gap-2 mt-3">
                     <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs w-fit">{movie.year}</span>
                     <div className="flex items-center">
